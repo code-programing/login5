@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(/background.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.tittle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  display: flex;
+  position: relative;
+  transform: scale(1.1);
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 15px 50px;
+}
+
+.form h1{
+  color: white;
+}
+
+.form a{
+  color: #ffdd00;
+}
+
+.form-link:hover , .login-signup a:hover{
+    color: #c4d80d;
+}
+
+.form p, .checkbox-content label, .input-field ::placeholder{
+  color: rgb(255, 255, 255);
+}
+
+.input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-field input {
+  outline: none;
+  border: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 60px;
+  font-size: 16px;  
+  border: transparent;
+  border-bottom: 2.5px solid #ffffff;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+input[type="text"], input[type="password"] {
+  background-color: transparent;
+}
+
+.input-field i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 23px;
+  transition: all 0.2s ease;
+  padding-left: 20px;
+}
+
+.checkbox-text{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.checkbox-text a{
+  padding-left: 10px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons p {
+  margin: 15px 15px;
+  text-align: center;
+}
+
+.icons i {
+  color: #b5b1b1;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.icons i:hover {
+  color: #ff0000;
+}
+
+.icons .fa-facebook:hover {
+  color: #1353dd;
+}
+
+.icons .fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.icons .fa-google:hover {
+  color: #dd4b39;
+}
+
+.form .button button {
+  height: 50px;
+  width: 200px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 40px;
+  background-color: #dd890a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button button:hover {
+  background-color: #eca428;
+}
+
+.login-signup{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.input-field::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease-out;
+}
+
+.input-field input:focus {
+  outline: none;
+}
+
+.input-field input:focus + ::before {
+  transform-origin: right;
+}
+
+/*Animation*/
+.input-field input:focus + i {
+  transform: translateY(-23px);
+  transition: transform 0.3s ease-in-out;
+}
